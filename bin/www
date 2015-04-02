@@ -91,11 +91,16 @@ function onListening() {
     console.log('Listening on ' + bind);
   debug('Listening on ' + bind);
 
+    registerWithServer();
+
+}
+
+var registerWithServer = function() {
     var params = {};
     params.name = os.hostname();
     params.port = port;
-    params.onColor = process.env.ON_COLOR || '#00ff00';
-    params.offColor = process.env.OFF_COLOR || '#000000';
+    params.onColor = process.env.ON_COLOR || '#3C3176';
+    params.offColor = process.env.OFF_COLOR || '#FFF7E8';
     requestify
         // 192.168.0.236 - Josh's laptop on MakeWorks5G
         .put('http://192.168.0.236:9000/register', params, {dataType: 'form-url-encoded'})
@@ -105,4 +110,6 @@ function onListening() {
         .catch(function(err) {
             console.log('Could not register with server', err);
         });
+
+    setTimeout(registerWithServer, 60000);
 }
