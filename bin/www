@@ -97,7 +97,8 @@ function onListening() {
     params.onColor = process.env.ON_COLOR || '#00ff00';
     params.offColor = process.env.OFF_COLOR || '#000000';
     requestify
-        .put('http://localhost:9000/register', params, {dataType: 'form-url-encoded'})
+        // 192.168.0.236 - Josh's laptop on MakeWorks5G
+        .put('http://192.168.0.236:9000/register', params, {dataType: 'form-url-encoded'})
         .then(function(/*response*/) {
             console.log('Registered with server');
         })
