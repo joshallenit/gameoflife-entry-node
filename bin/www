@@ -7,6 +7,8 @@
 var app = require('../app');
 var debug = require('debug')('empty:server');
 var http = require('http');
+var requestify = require('requestify');
+var os = require("os");
 
 /**
  * Get port from environment and store in Express.
@@ -88,4 +90,18 @@ function onListening() {
     : 'port ' + addr.port;
     console.log('Listening on ' + bind);
   debug('Listening on ' + bind);
+
+    var params = {};
+    params.name = os.hostname();
+    params.port = port;
+    params.onColor = '#00ff00';
+    params.offColor = '#000000';
+    requestify
+        .put('http://localhost:9000/register', params, {dataType: 'form-url-encoded'})
+        .then(function(/*response*/) {
+            console.log('Registered with server');
+        })
+        .catch(function(err) {
+            console.log('Could not register with server', err);
+        });
 }
