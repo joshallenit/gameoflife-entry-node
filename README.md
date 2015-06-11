@@ -3,3 +3,5 @@
 Edit routes/life.js and tests/routes-life-tests.js to put your functionality.
 
 Otherwise this is an empty shell project created by WebStorm > New Node Express Project.
+
+This app registers itself with a server
