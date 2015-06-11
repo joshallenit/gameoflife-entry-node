@@ -32,7 +32,7 @@ describe("GameOfLife tests", function () {
         done();
     });
 
-    // TODO: You're getting the idea
+    // TODO: You're getting the idea, one test for each neighbour
     it("subject - condition - expected result", function (done) {
         // Test Setup
         var grid = [
