@@ -94,8 +94,8 @@ function onListening() {
     var params = {};
     params.name = os.hostname();
     params.port = port;
-    params.onColor = process.env.ON_COLOR || '#00ff00';
-    params.offColor = process.env.OFF_COLOR || '#000000';
+    params.onColor = process.env.ON_COLOR || '#01430D';
+    params.offColor = process.env.OFF_COLOR || '#51A35F';
     requestify
         .put('http://localhost:9000/register', params, {dataType: 'form-url-encoded'})
         .then(function(/*response*/) {
