@@ -15,12 +15,49 @@ before(function(done) {
 
 describe("life routes", function () {
 
-    it("sample", function (done) {
-        var grid = [[0,0,0],[0,1,0][0,0,0]];
-        request(app)
-            .get('/life/iterate?grid='+encodeURIComponent(util.inspect(grid)))
-            .expect(200)
-            .end(done);
+    // TODO: First Test
+    it("subject - condition - expected result", function (done) {
+        // Test Setup
+        var grid = [
+            [1,0,0],
+            [0,1,0],
+            [0,0,0]
+        ];
+        // Test Execute...
+
+        // Test Validate...
+
+        done();
+    });
+
+    // TODO: Next Test
+    it("subject - condition - expected result", function (done) {
+        // Test Setup
+        var grid = [
+            [0,1,0],
+            [0,1,0],
+            [0,0,0]
+        ];
+        // Test Execute...
+
+        // Test Validate...
+
+        done();
+    });
+
+    // TODO: You're getting the idea
+    it("subject - condition - expected result", function (done) {
+        // Test Setup
+        var grid = [
+            [0,0,1],
+            [0,1,0],
+            [0,0,0]
+        ];
+        // Test Execute...
+
+        // Test Validate...
+
+        done();
     });
 
 });

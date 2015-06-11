@@ -6,7 +6,38 @@ var router = express.Router();
  */
 router.get('/iterate', function (req, res) {
     var grid = JSON.parse(req.query.grid);
+
+
+
     res.json(grid);
 });
 
-module.exports = router;
+
+module.export// TODO: Next Test
+    it("subject - condition - expected result", function (done) {
+        // Test Setup
+        var grid = [
+            [0,1,0],
+            [0,1,0],
+            [0,0,0]
+        ];
+        // Test Execute...
+
+        // Test Validate...
+
+        done();
+    });s = router;
+// TODO: Next Test
+    it("subject - condition - expected result", function (done) {
+        // Test Setup
+        var grid = [
+            [0,1,0],
+            [0,1,0],
+            [0,0,0]
+        ];
+        // Test Execute...
+
+        // Test Validate...
+
+        done();
+    });
